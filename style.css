@@ -1,0 +1,23 @@
+body {
+    margin: 4px;
+    background-color: rgb(146, 148, 164);
+}
+h1 {
+    background-color: tan;
+    color:rgb(29, 25, 25);
+    font-size:100px;
+    margin:0px;
+    text-align: center;
+    font-family: papyrus;
+    border-style:solid
+}
+p {
+    background-color: tan;
+    color:rgb(29, 25, 25);
+    margin:0px;
+    margin-top: 4px;
+    text-align: center;
+    font-family: papyrus;
+    border-style:solid;
+    font-size:30px;
+}
