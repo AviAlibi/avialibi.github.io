@@ -8,7 +8,7 @@ h1 {
     font-size:100px;
     margin:0px;
     text-align: center;
-    font-family: papyrus;
+    font-family:papyrus;
     border-style:solid
 }
 p {
@@ -20,4 +20,19 @@ p {
     font-family: papyrus;
     border-style:solid;
     font-size:30px;
+}
+h2 {
+    text-align: center;
+    margin: 0px;
+    border-bottom: 2px solid black;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2px;
+}
+.typoRacesVsClasses {
+    background-color:cadetblue;
+    border: 2px solid black;
+    margin-top: 4px;
 }
