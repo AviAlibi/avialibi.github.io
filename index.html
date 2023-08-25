@@ -1,13 +1,106 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css", href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overwatch 2 Aid</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
 </head>
+
 <body>
-    <h1>
-        Heroes Of Azelia
-    </h1>
-    <p>Heroes of Azelia is an upcoming dungeon based, first person rpg, with leveling mechanics similar to that of New World, Diablo and WoW.
-        \n
-    </p>
+    <div class="rc-region">
+        <div class="rc-container">
+            <h2>Random Character</h2>
+            <div class="rc-button-holder">
+                <button class="rc-tank-button" onclick="selectCharacter('tank')"><b>Tank</b></button>
+                <button class="rc-dps-button" onclick="selectCharacter('dps')"><b>DPS</b></button>
+                <button class="rc-support-button" onclick="selectCharacter('support')"><b>Support</b></button>
+                <button class="rc-full-team-button" onclick="selectCharacterWholeTeam()"><b>Team</b></button>
+            </div>
+            <div id="result"></div>
+        </div>
+    </div>
+    <div class="tcc-region">
+        <div>
+            <h2>Team Counter Calculator</h2>
+        </div>
+        <div class="enemy-team-select-container">
+                <select class="enemy-tank-select" name="enemy-tank" id="enemy-tank">
+                    <option value="D.Va">D.va</option>
+                    <option value="Doomfist">Doomfist</option>
+                    <option value="Orisa">Orisa</option>
+                    <option value="Reinhardt">Reinhardt</option>
+                    <option value="Roadhog">Roadhog</option>
+                    <option value="Sigma">Sigma</option>
+                    <option value="Winston">Winston</option>
+                    <option value="Wrecking Ball">Wrecking Ball</option>
+                    <option value="Zarya">Zarya</option>
+                    <option value="JunkerQueen">Junker Queen</option>
+                    <option value="Rammatra">Rammatra</option>
+                </select>
+                <select class="enemy-dps-select" name="enemy-dps" id="enemy-dps">
+                    <option value="Ashe">Ashe</option>
+                    <option value="Bastion">Bastion</option>
+                    <option value="Cassidy">Cassidy</option>
+                    <option value="Echo">Echo</option>
+                    <option value="Genji">Genji</option>
+                    <option value="Hanzo">Hanzo</option>
+                    <option value="Junkrat">Junkrat</option>
+                    <option value="Mei">Mei</option>
+                    <option value="Pharah">Pharah</option>
+                    <option value="Reaper">Reaper</option>
+                    <option value="Sojourn">Sojourn</option>
+                    <option value="Soldier: 76">Soldier: 76</option>
+                    <option value="Sombra">Sombra</option>
+                    <option value="Symmetra">Symmetra</option>
+                    <option value="Torbjörn">Torbjörn</option>
+                    <option value="Tracer">Tracer</option>
+                    <option value="Widowmaker">Widowmaker</option>
+                </select>
+                <select class="enemy-dps-select" name="enemy-dps" id="enemy-dps">
+                    <option value="Ashe">Ashe</option>
+                    <option value="Bastion">Bastion</option>
+                    <option value="Cassidy">Cassidy</option>
+                    <option value="Echo">Echo</option>
+                    <option value="Genji">Genji</option>
+                    <option value="Hanzo">Hanzo</option>
+                    <option value="Junkrat">Junkrat</option>
+                    <option value="Mei">Mei</option>
+                    <option value="Pharah">Pharah</option>
+                    <option value="Reaper">Reaper</option>
+                    <option value="Sojourn">Sojourn</option>
+                    <option value="Soldier: 76">Soldier: 76</option>
+                    <option value="Sombra">Sombra</option>
+                    <option value="Symmetra">Symmetra</option>
+                    <option value="Torbjörn">Torbjörn</option>
+                    <option value="Tracer">Tracer</option>
+                    <option value="Widowmaker">Widowmaker</option>
+                </select>
+                <select class="enemy-support-select" name="enemy-support" id="enemy-support">
+                    <option value="Ana">Ana</option>
+                    <option value="Baptiste">Baptiste</option>
+                    <option value="Brigitte">Brigitte</option>
+                    <option value="Illari">Illari</option>
+                    <option value="Kiriko">Kiriko</option>
+                    <option value="Lúcio">Lúcio</option>
+                    <option value="Mercy">Mercy</option>
+                    <option value="Moira">Moira</option>
+                    <option value="Zenyatta">Zenyatta</option>
+                </select>
+                <select class="enemy-support-select" name="enemy-support" id="enemy-support">
+                    <option value="Ana">Ana</option>
+                    <option value="Baptiste">Baptiste</option>
+                    <option value="Brigitte">Brigitte</option>
+                    <option value="Illari">Illari</option>
+                    <option value="Kiriko">Kiriko</option>
+                    <option value="Lúcio">Lúcio</option>
+                    <option value="Mercy">Mercy</option>
+                    <option value="Moira">Moira</option>
+                    <option value="Zenyatta">Zenyatta</option>
+                </select>
+        </div>
+    </div>
 </body>
+
+</html>

@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-color: black;
+}
+
+.rc-region {
+    text-align: center;
+    color: white;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top:10px;
+    height: 152px;
+}
+
+.rc-container {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.rc-tank-button,
+.rc-dps-button,
+.rc-support-button,
+.rc-full-team-button {
+    margin: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.rc-tank-button {
+    background-color: #3588e0;
+}
+
+.rc-dps-button {
+    background-color: #dd2b2b;
+}
+
+.rc-support-button {
+    background-color: #5ebd3e;
+}
+
+.rc-full-team-button {
+    background-color: #9457ab;
+}
+
+button:hover {
+    margin:0px;
+    border: white;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 3px;
+}
+
+#result {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: fit-content;
+    text-shadow: antiquewhite 1px 0 10px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.tcc-region {
+    text-align: center;
+    height: 500px;
+    width: 100%;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    padding-top: 10px;
+    height: 100px;
+}
+
+.enemy-team-select-container {
+    height: 30px;
+    justify-content: center;
+    text-align: center;
+}
+
+select {
+    text-align: center;
+    background-color: black;
+    border-radius: 15px;
+    font-weight: bold;
+    color:white;
+    justify-content: center;
+}
+
+.enemy-tank-select {
+    background-color: #3588e0;
+}
+
+.enemy-dps-select {
+    background-color: #dd2b2b;
+}
+
+.enemy-support-select {
+    background-color: #5ebd3e;
+}
