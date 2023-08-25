@@ -91,6 +91,10 @@ select {
     justify-content: center;
 }
 
+option {
+    font-weight: bold;
+}
+
 .enemy-tank-select {
     background-color: #3588e0;
 }
@@ -101,4 +105,57 @@ select {
 
 .enemy-support-select {
     background-color: #5ebd3e;
+}
+
+
+.friendly-team-comp-container {
+    display: flex;
+    /* Added this to display children in a row */
+    /* Optionally add space between children */
+    height: 250px;
+    justify-content: center;
+}
+
+.friendly-char-field-tank,
+.friendly-char-field-dps-1,
+.friendly-char-field-dps-2,
+.friendly-char-field-support-1,
+.friendly-char-field-support-2 {
+    text-align: center;
+    color: white;
+    height: 150px;
+    width: 100px;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    display:flex;
+}
+
+.friendly-char-field-tank,
+.friendly-char-field-dps-1,
+.friendly-char-field-dps-2,
+.friendly-char-field-support-1,
+.friendly-char-field-support-2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-end;
+}
+
+.friendly-char-tank-name,
+.friendly-char-dps1-name,
+.friendly-char-dps2-name,
+.friendly-char-support1-name,
+.friendly-char-support2-name {
+    margin-top: auto;
+}
+
+.friendly-char-img-holder {
+    margin-top: auto;
+}
+
+.friendly-char-img-holder img {
+    background-color: cyan;
+    width: 100%;
+    height: 100px;
 }
