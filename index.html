@@ -2,149 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overwatch 2 Aid</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <title>Best Trade Routes</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="rc-region">
-        <div class="rc-container">
-            <h2>Random Character</h2>
-            <div class="rc-button-holder">
-                <button class="rc-tank-button" onclick="selectCharacter('tank')"><b>Tank</b></button>
-                <button class="rc-dps-button" onclick="selectCharacter('dps')"><b>DPS</b></button>
-                <button class="rc-support-button" onclick="selectCharacter('support')"><b>Support</b></button>
-                <button class="rc-full-team-button" onclick="selectCharacterWholeTeam()"><b>Team</b></button>
-            </div>
-            <div id="result"></div>
-        </div>
-    </div>
-    <div class="tcc-region">
-        <div>
-            <h2>Ideal Team Comp Calculator</h2>
-            <p>To use this, simply enter the enemy teams composition, and a very basic system of crosschecking counters will read out what an ideal team would look like (according to the internet)</p>
-        </div>
-        <div class="enemy-team-select-container">
-                <select class="enemy-tank-select" name="enemy-tank" id="enemy-tank">
-                    <option value="D.Va" selected>D.va</option>
-                    <option value="Doomfist">Doomfist</option>
-                    <option value="Junker Queen">Junker Queen</option>
-                    <option value="Orisa">Orisa</option>
-                    <option value="Rammatra">Rammatra</option>
-                    <option value="Reinhardt">Reinhardt</option>
-                    <option value="Roadhog" >Roadhog</option>
-                    <option value="Sigma">Sigma</option>
-                    <option value="Winston">Winston</option>
-                    <option value="Wrecking Ball">Wrecking Ball</option>
-                    <option value="Zarya">Zarya</option>
-                </select>
-                <select class="enemy-dps-select" name="enemy-dps" id="enemy-dps-1">
-                    <option value="Ashe" selected>Ashe</option>
-                    <option value="Bastion">Bastion</option>
-                    <option value="Cassidy">Cassidy</option>
-                    <option value="Echo">Echo</option>
-                    <option value="Genji">Genji</option>
-                    <option value="Hanzo">Hanzo</option>
-                    <option value="Junkrat">Junkrat</option>
-                    <option value="Mei">Mei</option>
-                    <option value="Pharah">Pharah</option>
-                    <option value="Reaper">Reaper</option>
-                    <option value="Sojourn">Sojourn</option>
-                    <option value="Soldier: 76">Soldier: 76</option>
-                    <option value="Sombra">Sombra</option>
-                    <option value="Symmetra">Symmetra</option>
-                    <option value="Torbjorn">Torbjörn</option>
-                    <option value="Tracer">Tracer</option>
-                    <option value="Widowmaker">Widowmaker</option>
-                </select>
-                <select class="enemy-dps-select" name="enemy-dps" id="enemy-dps-2">
-                    <option value="Ashe">Ashe</option>
-                    <option value="Bastion" selected>Bastion</option>
-                    <option value="Cassidy">Cassidy</option>
-                    <option value="Echo">Echo</option>
-                    <option value="Genji">Genji</option>
-                    <option value="Hanzo">Hanzo</option>
-                    <option value="Junkrat">Junkrat</option>
-                    <option value="Mei">Mei</option>
-                    <option value="Pharah">Pharah</option>
-                    <option value="Reaper">Reaper</option>
-                    <option value="Sojourn">Sojourn</option>
-                    <option value="Soldier: 76">Soldier: 76</option>
-                    <option value="Sombra">Sombra</option>
-                    <option value="Symmetra">Symmetra</option>
-                    <option value="Torbjorn">Torbjörn</option>
-                    <option value="Tracer">Tracer</option>
-                    <option value="Widowmaker">Widowmaker</option>
-                </select>
-                <select class="enemy-support-select" name="enemy-support" id="enemy-support-1">
-                    <option value="Ana" selected>Ana</option>
-                    <option value="Baptiste">Baptiste</option>
-                    <option value="Brigitte">Brigitte</option>
-                    <option value="Illari">Illari</option>
-                    <option value="Kiriko">Kiriko</option>
-                    <option value="Lucio">Lucio</option>
-                    <option value="Lifeweaver">Lifeweaver</option>
-                    <option value="Mercy">Mercy</option>
-                    <option value="Moira">Moira</option>
-                    <option value="Zenyatta">Zenyatta</option>
-                </select>
-                <select class="enemy-support-select" name="enemy-support" id="enemy-support-2">
-                    <option value="Ana">Ana</option>
-                    <option value="Baptiste" selected>Baptiste</option>
-                    <option value="Brigitte">Brigitte</option>
-                    <option value="Illari">Illari</option>
-                    <option value="Kiriko">Kiriko</option>
-                    <option value="Lucio">Lucio</option>
-                    <option value="Lifeweaver">Lifeweaver</option>
-                    <option value="Mercy">Mercy</option>
-                    <option value="Moira">Moira</option>
-                    <option value="Zenyatta">Zenyatta</option>
-                </select>
-        </div>
-        <div class="friendly-team-comp-container">
-            <div class="friendly-char-field-tank">
-                <div class="friendly-char-tank-name" id="friendly-char-tank-name">
-                    tankName
-                </div>
-                <div class="friendly-char-img-holder">
-                    <img id="friendly-char-tank-img" src="characterImages/tanks/dva.png" height="100px" width="100px">
-                </div>
-            </div>
-            <div class="friendly-char-field-dps-1">
-                <div class="friendly-char-dps1-name" id="friendly-char-dps1-name">
-                    dps1Name
-                </div>
-                <div class="friendly-char-img-holder">
-                    <img id="friendly-char-dps1-img" src="characterImages/dps/ashe.png" height="100px" width="100px">
-                </div>
-            </div>
-            <div class="friendly-char-field-dps-2">
-                <div class="friendly-char-dps2-name" id="friendly-char-dps2-name">
-                    dps2Name
-                </div>
-                <div class="friendly-char-img-holder">
-                    <img id="friendly-char-dps2-img" src="characterImages/dps/bastion.png" height="100px" width="100px">
-                </div>
-            </div>
-            <div class="friendly-char-field-support-1">
-                <div class="friendly-char-support1-name" id="friendly-char-support1-name">
-                    support1Name
-                </div>
-                <div class="friendly-char-img-holder">
-                    <img id="friendly-char-support1-img" src="characterImages/supports/ana.png" height="100px" width="100px">
-                </div>
-            </div>
-            <div class="friendly-char-field-support-2">
-                <div class="friendly-char-support2-name" id="friendly-char-support2-name">
-                    support2Name
-                </div>
-                <div class="friendly-char-img-holder">
-                    <img id="friendly-char-support2-img" src="characterImages/supports/baptiste.png" height="100px" width="100px">
-                </div>
-            </div>
-        </div>
-    </div>
+    <h1>Best Trade Routes</h1>
+    <table id="routes">
+        <tr>
+            <th>Item</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Profit per Unit</th>
+        </tr>
+    </table>
+
+    <script src="app.js"></script>
 </body>
 </html>

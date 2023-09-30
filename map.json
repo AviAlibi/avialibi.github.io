@@ -1,0 +1,402 @@
+{
+    "Area 18": {
+        "location": "ArcCorp > ArcCorp > Area 18 > Trade and Development",
+        "buy": {
+            "Waste": 2,
+            "Scrap": 136
+        },
+        "sell": {
+            "Aluminum": 312,
+            "Titanium": 502,
+            "Agricium": 2539,
+            "Corundum": 370,
+            "Diamond": 4302,
+            "Quartz": 415,
+            "Laranite": 2802,
+            "Processed Food": 150,
+            "Medical Supplies": 1925,
+            "Distilled Spirits": 555,
+            "Stims": 379,
+            "Astatine": 900,
+            "Chlorine": 170,
+            "Fluorine": 295,
+            "Iodine": 44,
+            "Gold": 7534,
+            "Tungsten": 397,
+            "Beryl": 2661,
+            "Revenant Tree Pollen": 168,
+            "Borase": 3540,
+            "Copper": 407,
+            "Bexalite": 7692,
+            "Hephaestanite": 2669,
+            "Quantainium": 22258,
+            "Taranite": 7839,
+            "Hadanite": 275000,
+            "Recycled Material Composite": 7700,
+            "Iron": 406
+        }
+    },
+    "Shubin Mining Facility SCD-1": {
+        "location": "Crusader > Daymar > Shubin Mining Facility SCD-1",
+        "buy": {
+            "Beryl": 2400,
+            "Gold": 5892,
+            "Quartz": 303,
+            "Tungsten": 341,
+            "Corundum": 298,
+            "Waste": 2
+        },
+        "sell": {
+            "Medical Supplies": 1925,
+            "Processed Food": 150,
+            "Stim": 379,
+            "Distilled Spirits": 555,
+            "Hadanite": 261327,
+            "Dolivine": 130000,
+            "Aphorite": 146956
+        }
+    },
+    "Orison": {
+        "location": "Crusader > Crusader > Orison > Trade and Development",
+        "buy": {
+            "Scrap": 136,
+            "Waste": 2
+        },
+        "sell": {
+            "Agricultural Supplies": 120,
+            "Amioshi Plague": 1319,
+            "Aphorite": 152500,
+            "Astatine": 900,
+            "Chlorine": 170,
+            "Compboard": 2250,
+            "Degnous Root": 1319,
+            "Distilled Spirits": 555,
+            "Dolivine": 130000,
+            "Fluorine": 295,
+            "Golden Medmon": 1979,
+            "Hadanite": 268522,
+            "Heart of the Woods": 2300,
+            "Helium": 220,
+            "Iodine": 44,
+            "Medical Supplies": 1837,
+            "Pitambu": 1650,
+            "Processed Food": 150,
+            "Prota": 1380,
+            "Ranta Dung": 4400,
+            "Revenant Pod": 1687,
+            "Luminalia Gift": 50000,
+            "Year of the Rooster Envelope": 50000,
+            "Stims": 379,
+            "Janalite": 17676,
+            "Iron": 347
+        }
+    },
+    "Lorville": {
+        "location": {},
+        "buy": {
+            "Scrap": 136,
+            "Waste": 2
+        },
+        "sell": {
+            "Aluminum": 326,
+            "Agricultural Supplies": 120,
+            "Processed Food": 150,
+            "Hydrogen": 110,
+            "Astatine": 900,
+            "Chlorine": 170,
+            "Fluorine": 295,
+            "Iodine": 44,
+            "Medical Supplies": 1925,
+            "Agricium": 2460,
+            "Gold": 7214,
+            "Titanium": 502,
+            "Tungsten": 414,
+            "Beryl": 2757,
+            "Corundum": 385,
+            "Diamond": 4302,
+            "Laranite": 2925,
+            "Quartz": 392,
+            "Distilled Spirits": 555,
+            "Stims": 379,
+            "Revenant Tree Pollen": 168,
+            "Taranite": 7687,
+            "Quantainium": 24004,
+            "Hephaestanite": 2752,
+            "Copper": 384,
+            "Borase": 3633,
+            "Bexalite": 7824,
+            "Hadanite": 272677,
+            "Recycled Material Composite": 7700
+        }
+    },
+    "HDMS-Woodruff": {
+        "location": "Hurston > Ita > HDMS-Woodruff",
+        "buy": {
+            "Agricultural Supplies": 100,
+            "Hydrogen": 90,
+            "Astatine": 700,
+            "Aluminum": 247,
+            "Beryl": 2337,
+            "Waste": 2
+        },
+        "sell": {
+            "Processed Food": 150,
+            "Medical Supplies": 1925,
+            "Distilled Spirits": 555,
+            "Stims": 379,
+            "Hadanite": 275000,
+            "Dolivine": 130000,
+            "Aphorite": 152500,
+            "Compboard": 2250,
+            "Helium": 189
+        }
+    },
+    "HDMS-Ryder": {
+        "location": "Hurston > Ita > HDMS-Ryder",
+        "buy": {
+            "Agricultural Supplies": 100,
+            "Hydrogen": 90,
+            "Astatine": 700,
+            "Aluminum": 247,
+            "Beryl": 2337,
+            "Waste": 2
+        },
+        "sell": {
+            "Processed Food": 150,
+            "Medical Supplies": 1925,
+            "Distilled Spirits": 555,
+            "Stims": 379,
+            "Hadanite": 275000,
+            "Dolivine": 130000,
+            "Aphorite": 152500,
+            "Compboard": 2250,
+            "Helium": 189
+        }
+    },
+    "HMDS-Anderson": {
+        "location": "Hurston > Aberdeen > HDMS-Anderson",
+        "buy": {
+            "Agricultural Supplies": 100,
+            "Aluminum": 247,
+            "Waste": 2
+        },
+        "sell": {
+            "Processed Food": 150,
+            "Medical Supplies": 1925,
+            "Distilled Spirits": 555,
+            "Stims": 379,
+            "Hadanite": 261516,
+            "Dolivine": 130000,
+            "Aphorite": 152500,
+            "Compboard": 2250
+        }
+    },
+    "HDMS-Norgaard": {
+        "location": "Hurston > Aberdeen > HDMS-Norgaard",
+        "buy": {
+            "Agricultural Supplies": 100,
+            "Aluminum": 247,
+            "Waste": 2
+        },
+        "sell": {
+            "Processed Food": 150,
+            "Medical Supplies": 1925,
+            "Distilled Spirits": 555,
+            "Stims": 379,
+            "Hadanite": 261871,
+            "Dolivine": 129180,
+            "Aphorite": 152500,
+            "Compboard": 2250
+        }
+    },
+    "HDMS-Bezdek": {
+        "location": "Hurston > Arial > HDMS-Bezdek",
+        "buy": {
+            "Agricultural Supplies": 100,
+            "Aluminum": 247,
+            "Titanium": 362,
+            "Tungsten": 322,
+            "Laranite": 2459,
+            "Waste": 2
+        },
+        "sell": {
+            "Processed Food": 150,
+            "Medical Supplies": 1925,
+            "Distilled Spirits": 555,
+            "Stims": 379,
+            "Hadanite": 275000,
+            "Dolivine": 130000,
+            "Aphorite": 152500,
+            "Compboard": 2250
+        }
+    },
+    "HDMS-Lathan": {
+        "location": "Hurston > Arial > HDMS-Lathan",
+        "buy": {
+            "Agricultural Supplies": 100,
+            "Aluminum": 247,
+            "Titanium": 362,
+            "Tungsten": 322,
+            "Laranite": 2473,
+            "Waste": 2
+        },
+        "sell": {
+            "Processed Food": 150,
+            "Medical Supplies": 1925,
+            "Distilled Spirits": 555,
+            "Stims": 379,
+            "Hadanite": 272612,
+            "Dolivine": 130000,
+            "Aphorite": 152500,
+            "Compboard": 2250
+        }
+    },
+    "HDMS-Perlman": {
+        "location": "Hurston > Magda > HDMS-Perlman",
+        "buy": {
+            "Agricultural Supplies": 96,
+            "Chlorine": 130,
+            "Fuorine": 231,
+            "Aluminum": 245,
+            "Diamond": 3904,
+            "Scrap": 136
+        },
+        "sell": {
+            "Processed Food": 152,
+            "Medical Supplies": 1936,
+            "Distilled Spirits": 564,
+            "Stims": 384,
+            "Hadanite": 275000,
+            "Dolivine": 130000,
+            "Aphorite": 152500,
+            "Compboard": 2250
+        }
+    },
+    "HDMS-Hahn": {
+        "location": "Hurston > Magda > HDMS-Hahn",
+        "buy": {
+            "Agricultural Supplies": 100,
+            "Chlorine": 130,
+            "Fluorine": 235,
+            "Aluminum": 247,
+            "Diamond": 3944,
+            "Scrap": 136
+        },
+        "sell": {
+            "Processed Food": 150,
+            "Medical Supplies": 1925,
+            "Distilled Spirits": 555,
+            "Stims": 379,
+            "Hadanite": 269399,
+            "Dolivine": 127692,
+            "Aphorite": 149784,
+            "Compboard": 2250,
+            "Iron": 347
+        }
+    },
+    "HDMS-Edmond": {
+        "location": "Hurston > HDMS-Edmond",
+        "buy": {
+            "Aluminum": 247,
+            "Waste": 2
+        },
+        "sell": {
+            "Processed Food": 150,
+            "Medical Supplies": 1925,
+            "Distilled Spirits": 555,
+            "Stims": 379,
+            "Hadanite": 275000,
+            "Dolivine": 130000,
+            "Aphorite": 152500,
+            "Compboard": 2250
+        }
+    },
+    "HDMS-Stanhope": {
+        "location": "Hurston > HDMS-Stanhope",
+        "buy": {
+            "Aluminum": 247,
+            "Corundum": 298
+        },
+        "sell": {
+            "Processed Food": 150,
+            "Medical Supplies": 1925,
+            "Distilled Spirits": 555,
+            "Stims": 379,
+            "Waste": 1,
+            "Hadanite": 272612,
+            "Dolivine": 130000,
+            "Aphorite": 152500,
+            "Compboard": 2250
+        }
+    },
+    "HMDS-Thedus": {
+        "location": "Hurston > HDMS-Thedus",
+        "buy": {
+            "Aluminum": 247,
+            "Scrap": 136,
+            "Waste": 2
+        },
+        "sell": {
+            "Processed Food": 150,
+            "Medical Supplies": 1925,
+            "Distilled Spirits": 555,
+            "Stims": 379,
+            "Hadanite": 267159,
+            "Dolivine": 126999,
+            "Aphorite": 152500,
+            "Compboard": 2250
+        }
+    },
+    "HDMS-Pinewood": {
+        "location": "Hurston > HDMS-Pinewood",
+        "buy": {
+            "Aluminum": 247,
+            "Scrap": 136,
+            "Waste": 2
+        },
+        "sell": {
+            "Processed Food": 150,
+            "Medical Supplies": 1925,
+            "Distilled Spirits": 555,
+            "Stims": 379,
+            "Hadanite": 268861,
+            "Dolivine": 130000,
+            "Aphorite": 152500,
+            "Compboard": 2250
+        }
+    },
+    "HDMS-Hadley": {
+        "location": "Hurston > HDMS-Hadley",
+        "buy": {
+            "Aluminum": 247,
+            "Waste": 2
+        },
+        "sell": {
+            "Processed Food": 150,
+            "Medical Supplies": 1925,
+            "Distilled Spirits": 555,
+            "Stims": 379,
+            "Hadanite": 270563,
+            "Dolivine": 130000,
+            "Aphorite": 152500,
+            "Compboard": 2250
+        }
+    },
+    "HDMS-Operai": {
+        "location": "Hurston > HDMS-Operai",
+        "buy": {
+            "Aluminum": 247,
+            "Waste": 2
+        },
+        "sell": {
+            "Processed Food": 150,
+            "Medical Supplies": 1925,
+            "Distilled Spirits": 555,
+            "Stims": 379,
+            "Hadanite": 275000,
+            "Dolivine": 130000,
+            "Aphorite": 152500,
+            "Compboard": 2250
+        }
+    }
+}
