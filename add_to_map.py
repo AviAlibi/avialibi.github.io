@@ -1,10 +1,8 @@
 import json
 import os
 
-# Path to your JSON file
 filename = 'map.json'
 
-# Load existing data
 try:
     with open(filename, 'r') as file:
         data = json.load(file)
@@ -29,10 +27,8 @@ while True:
 
     os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console screen before asking for location name
 
-    # Ask the user for the location name
     location_name = input("Enter the name of the location (e.g., Shubin Mining Facility SCD-1): ")
 
-    # Check if location already exists
     if location_name in data:
         print(f"{location_name} already exists in the data.")
         update = input("Do you want to update it? (yes/no): ").lower()
@@ -41,13 +37,11 @@ while True:
             input("Press Enter to continue...")
             continue
     else:
-        # If location does not exist, create it
         data[location_name] = {"location": "", "buy": {}, "sell": {}}
         data[location_name]["location"] = input(f"Enter the location for {location_name}: ")
     
     os.system('cls' if os.name == 'nt' else 'clear')
 
-    # Fill in the buy and sell dictionaries
     for transaction_type in ["buy", "sell"]:
         print(f"Enter items to {transaction_type} for {location_name}. Type 'done' when finished.")
         while True:
@@ -62,7 +56,6 @@ while True:
                 continue
             os.system('cls' if os.name == 'nt' else 'clear')
 
-    # Save the updated data back to the JSON file
     with open(filename, 'w') as file:
         json.dump(data, file, indent=4)
 
