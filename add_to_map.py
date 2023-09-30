@@ -1,5 +1,9 @@
 import json
 import os
+import colorama
+from colorama import Fore, Back, Style
+
+colorama.init()
 
 filename = 'map.json'
 
@@ -10,23 +14,23 @@ except FileNotFoundError:
     data = {}
 
 while True:
-    os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console screen
-
-    print("\nMain Menu:")
-    print("1. Start")
-    print("2. Exit")
+    os.system('cls' if os.name == 'nt' else 'clear')  
+    
+    print(Fore.GREEN + "\nMain Menu:" + Fore.RESET)
+    print(Fore.BLUE + "1. Start" + Fore.RESET)
+    print(Fore.BLUE + "2. Exit" + Fore.RESET)
     choice = input("Enter your choice (1/2): ")
 
     if choice == '2':
-        print("Exiting...")
+        print(Fore.RED + "Exiting..." + Fore.RESET)
         break
     elif choice != '1':
-        print("Invalid choice. Please enter 1 to start or 2 to exit.")
+        print(Fore.RED + "Invalid choice. Please enter 1 to start or 2 to exit." + Fore.RESET)
         input("Press Enter to continue...")
-        continue  # Clear the screen again before reprinting the menu
-
-    os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console screen before asking for location name
-
+        continue  
+    
+    os.system('cls' if os.name == 'nt' else 'clear')
+    
     location_name = input("Enter the name of the location (e.g., Shubin Mining Facility SCD-1): ")
 
     if location_name in data:
@@ -43,7 +47,7 @@ while True:
     os.system('cls' if os.name == 'nt' else 'clear')
 
     for transaction_type in ["buy", "sell"]:
-        print(f"Enter items to {transaction_type} for {location_name}. Type 'done' when finished.")
+        print(Fore.MAGENTA + f"Enter items to {transaction_type} for {location_name}. Type 'done' when finished." + Fore.RESET)
         while True:
             item_name = input(f"Enter the name of the item to {transaction_type} (or 'done' to finish): ")
             if item_name.lower() == 'done':
@@ -52,12 +56,12 @@ while True:
             try:
                 data[location_name][transaction_type][item_name] = int(item_price)
             except ValueError:
-                print("Invalid price entered. Please enter a valid number.")
+                print(Fore.RED + "Invalid price entered. Please enter a valid number." + Fore.RESET)
                 continue
             os.system('cls' if os.name == 'nt' else 'clear')
 
     with open(filename, 'w') as file:
         json.dump(data, file, indent=4)
 
-    print("Data successfully saved!")
+    print(Fore.GREEN + "Data successfully saved!" + Fore.RESET)
     input("Press Enter to continue...")

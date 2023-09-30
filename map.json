@@ -398,5 +398,30 @@
             "Aphorite": 152500,
             "Compboard": 2250
         }
+    },
+    "Everus Harbor": {
+        "location": "Hurston > Everus Harbor",
+        "buy": {
+            "Scrap": 138,
+            "Iron": 313
+        },
+        "sell": {
+            "Medical Supplies": 1936,
+            "Distilled Spirits": 546,
+            "Waste": 2,
+            "Processed Food": 195,
+            "Hydrogen": 135,
+            "Stims": 385,
+            "Dolivine": 125103,
+            "Compboard": 2250,
+            "Aphorite": 152161,
+            "Hadanite": 265448,
+            "Degnous Root": 1319,
+            "Audio Visual Equipment": 25156,
+            "Party Favors": 1364,
+            "Souvenirs": 1050,
+            "Helium": 229,
+            "Hephaestanite": 2377
+        }
     }
 }
