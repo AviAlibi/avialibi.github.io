@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Builder</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <form class="form" id="locationForm">
+        <div class="form-container">
+            The name of the location as shown in the Star Map
+            <div class="input-group">
+                <label for="poiName">POI Name:</label>
+                <input type="text" id="poiName" name="poiName" required>
+            </div>
+            <br>
+            The location as a list of regions it is within. Example: Hurston > Ita > HDMS-Woodruff
+            <div class="input-group">
+                <label for="location">Display Location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <br>
+            This is used to select what type of data is being appended with Item and Value, if you put nothing within item and value, then it will do nothing beyond creating the location
+            <div class="input-group">
+                <label for="key">Key:</label>
+                <select id="key" name="key">
+                    <option value="buy">Buy</option>
+                    <option value="sell">Sell</option>
+                </select>
+            </div>
+            <br>
+            The commodity being bought/sold
+            <div class="input-group">
+                <label for="itemName">Item:</label>
+                <input type="text" id="itemName" name="itemName" required>
+            </div>
+            <br>
+            The price per UNIT, note that for buy goods, they will only show the unit price if you have selected a inventory with atleast 1 scu cargo space available
+            <div class="input-group">
+                <label for="itemValue">Value:</label>
+                <input type="number" id="itemValue" name="itemValue" required>
+            </div>
+            
+            <button class="ar_item" type="button" onclick="addItem()">Add/Replace Item</button>
+        </div>
+    </form>
+    
+    <hr>
+    <div class="json_area_container">
+        <textarea class="json_area" id="jsonData" rows="10" cols="50"></textarea>
+    </div>
+    <div class="export_container">
+        <button class="export_data_button" onclick="exportJSON()">Export JSON</button>
+    </div>
+    <div class="remove-container">
+        Use this if a POI has an incorrect name/display location
+        <div class="input-group">
+            <input type="text" id="removePOIName" placeholder="POI Name to remove">
+            <button class="remove_poi_button" onclick="removePOI()">Remove POI</button>
+        </div>
+    </div>
+    <script src="test.js"></script>
+</body>
+</html>

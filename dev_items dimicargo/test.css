@@ -1,0 +1,68 @@
+body,html {
+    background-color: rgb(65, 71, 97);
+}
+
+.form, .export_container, .json_area_container, .remove-container {
+    padding: 10px;
+    color:white;
+}
+
+.export_data_button {
+    background-color: rgb(121, 191, 120);
+    padding: 10px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    font-family: monospace;
+    border-radius: 10px;
+    font-size: large;
+}
+
+.json_area {
+    background-color:rgb(176, 155, 126);
+    color:rgb(0, 0, 0);
+}
+
+.input-group {
+    background-color: rgb(176, 155, 126);
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: table;
+    color: white;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    font-family: monospace;
+    font-size: large;
+}
+
+.form-container {
+    text-align: left;
+    /* Ensures that the child elements are left-aligned */
+}
+
+.ar_item {
+    background-color: rgb(121, 191, 120);
+    padding: 10px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    font-family: monospace;
+    border-radius: 10px;
+    font-size: large;
+}
+
+input {
+    background-color: rgb(213, 213, 213);
+    color:black;
+    font-weight: bolder;
+}
+
+.remove_poi_button {
+    background-color: rgb(189, 62, 62);
+    font-weight: bolder;
+    color: white;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    font-family: monospace;
+    border-radius: 10px;
+    font-size: large;
+}
