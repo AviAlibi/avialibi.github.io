@@ -10,13 +10,13 @@
             The name of the location as shown in the Star Map
             <div class="input-group">
                 <label for="poiName">POI Name:</label>
-                <input type="text" id="poiName" name="poiName" required>
+                <input type="text" id="poiName" name="poiName" placeholder="Lorville" required>
             </div>
             <br>
             The location as a list of regions it is within. Example: Hurston > Ita > HDMS-Woodruff
             <div class="input-group">
                 <label for="location">Display Location:</label>
-                <input type="text" id="location" name="location" required>
+                <input type="text" id="location" name="location" placeholder="Hurston > Lorville" required>
             </div>
             <br>
             This is used to select what type of data is being appended with Item and Value, if you put nothing within item and value, then it will do nothing beyond creating the location
@@ -31,13 +31,19 @@
             The commodity being bought/sold
             <div class="input-group">
                 <label for="itemName">Item:</label>
-                <input type="text" id="itemName" name="itemName" required>
+                <input type="text" id="itemName" name="itemName" placeholder="Commodity" required>
             </div>
             <br>
             The price per UNIT, note that for buy goods, they will only show the unit price if you have selected a inventory with atleast 1 scu cargo space available
             <div class="input-group">
                 <label for="itemValue">Value:</label>
-                <input type="number" id="itemValue" name="itemValue" required>
+                <input type="number" id="itemValue" name="itemValue" placeholder="30" required>
+            </div>
+            <br>
+            The usernames you are known as, 
+            <div class="input-group">
+                <label for="contributors">Contributors:</label>
+                <input type="text" id="contributors" name="contributors" placeholder="SC:Name1, Discord:Name2" required>
             </div>
             
             <button class="ar_item" type="button" onclick="addItem()">Add/Replace Item</button>

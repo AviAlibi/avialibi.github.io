@@ -34,7 +34,13 @@
             "Hadanite": 275000,
             "Recycled Material Composite": 7700,
             "Iron": 406
-        }
+        },
+        "contributors": [
+            [
+                "SC:Dimistar",
+                "Discord:petrichor999"
+            ]
+        ]
     },
     "Shubin Mining Facility SCD-1": {
         "location": "Crusader > Daymar > Shubin Mining Facility SCD-1",
@@ -54,7 +60,13 @@
             "Hadanite": 261327,
             "Dolivine": 130000,
             "Aphorite": 146956
-        }
+        },
+        "contributors": [
+            [
+                "SC:Dimistar",
+                "Discord:petrichor999"
+            ]
+        ]
     },
     "Orison": {
         "location": "Crusader > Crusader > Orison > Trade and Development",
@@ -89,7 +101,13 @@
             "Stims": 379,
             "Janalite": 17676,
             "Iron": 347
-        }
+        },
+        "contributors": [
+            [
+                "SC:Dimistar",
+                "Discord:petrichor999"
+            ]
+        ]
     },
     "Lorville": {
         "location": {},
@@ -127,7 +145,13 @@
             "Bexalite": 7824,
             "Hadanite": 272677,
             "Recycled Material Composite": 7700
-        }
+        },
+        "contributors": [
+            [
+                "SC:Dimistar",
+                "Discord:petrichor999"
+            ]
+        ]
     },
     "HDMS-Woodruff": {
         "location": "Hurston > Ita > HDMS-Woodruff",
@@ -149,7 +173,13 @@
             "Aphorite": 152500,
             "Compboard": 2250,
             "Helium": 189
-        }
+        },
+        "contributors": [
+            [
+                "SC:Dimistar",
+                "Discord:petrichor999"
+            ]
+        ]
     },
     "HDMS-Ryder": {
         "location": "Hurston > Ita > HDMS-Ryder",
@@ -171,7 +201,13 @@
             "Aphorite": 152500,
             "Compboard": 2250,
             "Helium": 189
-        }
+        },
+        "contributors": [
+            [
+                "SC:Dimistar",
+                "Discord:petrichor999"
+            ]
+        ]
     },
     "HMDS-Anderson": {
         "location": "Hurston > Aberdeen > HDMS-Anderson",
@@ -189,7 +225,13 @@
             "Dolivine": 130000,
             "Aphorite": 152500,
             "Compboard": 2250
-        }
+        },
+        "contributors": [
+            [
+                "SC:Dimistar",
+                "Discord:petrichor999"
+            ]
+        ]
     },
     "HDMS-Norgaard": {
         "location": "Hurston > Aberdeen > HDMS-Norgaard",
@@ -207,7 +249,13 @@
             "Dolivine": 129180,
             "Aphorite": 152500,
             "Compboard": 2250
-        }
+        },
+        "contributors": [
+            [
+                "SC:Dimistar",
+                "Discord:petrichor999"
+            ]
+        ]
     },
     "HDMS-Bezdek": {
         "location": "Hurston > Arial > HDMS-Bezdek",
@@ -228,7 +276,13 @@
             "Dolivine": 130000,
             "Aphorite": 152500,
             "Compboard": 2250
-        }
+        },
+        "contributors": [
+            [
+                "SC:Dimistar",
+                "Discord:petrichor999"
+            ]
+        ]
     },
     "HDMS-Lathan": {
         "location": "Hurston > Arial > HDMS-Lathan",
@@ -249,7 +303,13 @@
             "Dolivine": 130000,
             "Aphorite": 152500,
             "Compboard": 2250
-        }
+        },
+        "contributors": [
+            [
+                "SC:Dimistar",
+                "Discord:petrichor999"
+            ]
+        ]
     },
     "HDMS-Perlman": {
         "location": "Hurston > Magda > HDMS-Perlman",
@@ -270,7 +330,13 @@
             "Dolivine": 130000,
             "Aphorite": 152500,
             "Compboard": 2250
-        }
+        },
+        "contributors": [
+            [
+                "SC:Dimistar",
+                "Discord:petrichor999"
+            ]
+        ]
     },
     "HDMS-Hahn": {
         "location": "Hurston > Magda > HDMS-Hahn",
@@ -292,7 +358,13 @@
             "Aphorite": 149784,
             "Compboard": 2250,
             "Iron": 347
-        }
+        },
+        "contributors": [
+            [
+                "SC:Dimistar",
+                "Discord:petrichor999"
+            ]
+        ]
     },
     "HDMS-Edmond": {
         "location": "Hurston > HDMS-Edmond",
@@ -309,7 +381,13 @@
             "Dolivine": 130000,
             "Aphorite": 152500,
             "Compboard": 2250
-        }
+        },
+        "contributors": [
+            [
+                "SC:Dimistar",
+                "Discord:petrichor999"
+            ]
+        ]
     },
     "HDMS-Stanhope": {
         "location": "Hurston > HDMS-Stanhope",
@@ -327,7 +405,13 @@
             "Dolivine": 130000,
             "Aphorite": 152500,
             "Compboard": 2250
-        }
+        },
+        "contributors": [
+            [
+                "SC:Dimistar",
+                "Discord:petrichor999"
+            ]
+        ]
     },
     "HMDS-Thedus": {
         "location": "Hurston > HDMS-Thedus",
@@ -345,7 +429,13 @@
             "Dolivine": 126999,
             "Aphorite": 152500,
             "Compboard": 2250
-        }
+        },
+        "contributors": [
+            [
+                "SC:Dimistar",
+                "Discord:petrichor999"
+            ]
+        ]
     },
     "HDMS-Pinewood": {
         "location": "Hurston > HDMS-Pinewood",
@@ -363,7 +453,13 @@
             "Dolivine": 130000,
             "Aphorite": 152500,
             "Compboard": 2250
-        }
+        },
+        "contributors": [
+            [
+                "SC:Dimistar",
+                "Discord:petrichor999"
+            ]
+        ]
     },
     "HDMS-Hadley": {
         "location": "Hurston > HDMS-Hadley",
@@ -380,7 +476,13 @@
             "Dolivine": 130000,
             "Aphorite": 152500,
             "Compboard": 2250
-        }
+        },
+        "contributors": [
+            [
+                "SC:Dimistar",
+                "Discord:petrichor999"
+            ]
+        ]
     },
     "HDMS-Operai": {
         "location": "Hurston > HDMS-Operai",
@@ -397,7 +499,13 @@
             "Dolivine": 130000,
             "Aphorite": 152500,
             "Compboard": 2250
-        }
+        },
+        "contributors": [
+            [
+                "SC:Dimistar",
+                "Discord:petrichor999"
+            ]
+        ]
     },
     "Everus Harbor": {
         "location": "Hurston > Everus Harbor",
@@ -422,6 +530,12 @@
             "Souvenirs": 1050,
             "Helium": 229,
             "Hephaestanite": 2377
-        }
+        },
+        "contributors": [
+            [
+                "SC:Dimistar",
+                "Discord:petrichor999"
+            ]
+        ]
     }
 }

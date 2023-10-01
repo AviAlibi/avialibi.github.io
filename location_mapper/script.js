@@ -11,21 +11,40 @@ function addItem() {
     const key = document.getElementById('key').value;
     const itemName = document.getElementById('itemName').value;
     const itemValue = Number(document.getElementById('itemValue').value);
+    const contributorsInput = document.getElementById('contributors');
+    const contributorsStr = contributorsInput.value; // Get contributors string
+
+    // Save the contributor string to local storage
+    localStorage.setItem('contributors', contributorsStr);
 
     if (!data[poiName]) {
-        data[poiName] = { location: location, buy: {}, sell: {} };
+        data[poiName] = { location: location, buy: {}, sell: {}, contributors: [] };
     }
-
 
     data[poiName][key][itemName] = itemValue;
 
-    // if the item is sold or bought for nothing, remove it, this is impossible
+    // If contributorsStr is not empty, split it into an array and set it to the data object
+    if (contributorsStr.trim() !== "") {
+        // Update to keep all contributor items in one list within the contributor list
+        data[poiName].contributors = [contributorsStr.split(', ')];
+    }
+
     if (itemValue === 0) {
         delete data[poiName][key][itemName];
     }
+
     loadData();
 }
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    // … your existing code
+
+    // Load the contributor input from local storage and set it to the input field
+    const contributorsStr = localStorage.getItem('contributors') || '';
+    document.getElementById('contributors').value = contributorsStr;
+
+    // … your existing code
+});
 
 function exportJSON() {
     const jsonDataElement = document.getElementById('jsonData');
