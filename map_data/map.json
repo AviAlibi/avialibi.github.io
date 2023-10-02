@@ -537,5 +537,51 @@
                 "Discord:petrichor999"
             ]
         ]
+    },
+    "Seraphim Station": {
+        "location": "Crusader > Seraphim Station",
+        "buy": {
+            "Helium": 186,
+            "Hydrogen": 92,
+            "Scrap": 136,
+            "Waste": 2,
+            "Copper": 293
+        },
+        "sell": {
+            "Agricultural Supplies": 120,
+            "Amioshi Plague": 1319,
+            "Aphorite": 152500,
+            "Astatine": 900,
+            "Chlorine": 170,
+            "Compboard": 2250,
+            "Degnous Root": 1319,
+            "Distilled Spirits": 546,
+            "Dolivine": 130000,
+            "Fluorine": 295,
+            "Golden Medmon": 1979,
+            "Hadanite": 275000,
+            "Heart of the Woods": 2300,
+            "Luminalia Gift": 50000,
+            "Year of the Rooster Envelope": 50000,
+            "Iodine": 44,
+            "Iron": 347,
+            "Janalite": 17675991,
+            "Medical Supplies": 1833,
+            "Pitambu": 1650,
+            "Processed Food": 165,
+            "Prota": 1380,
+            "Ranta Dung": 4400,
+            "Revenant Pod": 1687,
+            "Stims": 379,
+            "Hephaestanite": 2355,
+            "Maze": 160000
+        },
+        "contributors": [
+            [
+                "SC:DimiStar",
+                "Discord:petrichor999",
+                "twitter:twitterName"
+            ]
+        ]
     }
 }

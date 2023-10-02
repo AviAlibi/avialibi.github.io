@@ -1,8 +1,8 @@
 import json
 
 # Specify the filenames
-file1 = 'file1.json'
-file2 = 'file2.json'
+file1 = 'dev_items dimicargo\\test_map.json'
+file2 = 'dev_items dimicargo\data.json'
 output_file = 'merged.json'
 
 # Read the first file
