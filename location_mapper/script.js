@@ -1,8 +1,17 @@
 let data = {};
 
 function loadData() {
+    // Load data from localStorage when page loads.
+    const jsonData = localStorage.getItem('jsonData');
+    data = jsonData ? JSON.parse(jsonData) : {}; // Parse JSON string to object
+
     const jsonDataElement = document.getElementById('jsonData');
     jsonDataElement.value = JSON.stringify(data, null, 4);
+}
+
+function saveData() {
+    // Save data to localStorage whenever it changes
+    localStorage.setItem('jsonData', JSON.stringify(data));
 }
 
 function addItem() {
@@ -33,6 +42,8 @@ function addItem() {
         delete data[poiName][key][itemName];
     }
 
+    saveData();
+
     loadData();
 }
 
@@ -47,10 +58,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function exportJSON() {
-    const jsonDataElement = document.getElementById('jsonData');
-    jsonDataElement.select();
-    document.execCommand('copy');
-    alert("JSON data copied to clipboard!");
+    const blob = new Blob([JSON.stringify(data, null, 4)], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'data.json';
+    a.click();
 }
 
 function removePOI() {
@@ -62,6 +74,10 @@ function removePOI() {
     } else {
         alert(`${poiNameToRemove} does not exist!`);
     }
+
+    saveData();
+
+    loadData();
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -82,15 +98,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
             modal.style.display = 'none';
         }
     }
+
+    loadData();
 });
 
-// function exportJSON() {
-//     const blob = new Blob([JSON.stringify(data, null, 4)], { type: 'application/json' });
-//     const a = document.createElement('a');
-//     a.href = URL.createObjectURL(blob);
-//     a.download = 'data.json';
-//     a.click();
-// }
+function clearJSONData() {
+    if (confirm('Are you sure you want to clear all JSON data?')) {
+        data = {};
+        saveData(); // Save the cleared data
+        loadData(); // Load the cleared data
+    }
+}
 
 // Load data when the page loads
 loadData();

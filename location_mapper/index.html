@@ -55,6 +55,8 @@
         <textarea class="json_area" id="jsonData" rows="10" cols="50"></textarea>
     </div>
     <div class="export_container">
+        <label for="fileName"></label>
+        <input type="text" id="fileName" name="fileName" placeholder="Filename: yela">
         <button class="export_data_button" onclick="exportJSON()">Export JSON</button>
     </div>
     <div class="remove-container">
@@ -62,6 +64,9 @@
         <div class="input-group">
             <input type="text" id="removePOIName" placeholder="POI Name to remove">
             <button class="remove_poi_button" onclick="removePOI()">Remove POI</button>
+        </div>
+        <div class="input-group">
+            <button class="clear_json_button" onclick="clearJSONData()">Clear JSON</button>
         </div>
     </div>
     <script src="script.js"></script>
