@@ -58,10 +58,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function exportJSON() {
+    const fileNameInput = document.getElementById('fileName');
+    let fileName = fileNameInput.value; // Get the value from the input
+    fileName = fileName.trim(); // Remove any leading/trailing whitespace
+    if (!fileName) { // If filename is empty string, use default 'data.json'
+        fileName = 'data';
+    }
+
     const blob = new Blob([JSON.stringify(data, null, 4)], { type: 'application/json' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = 'data.json';
+    a.download = `${fileName}.json`; // Use the provided filename
     a.click();
 }
 
