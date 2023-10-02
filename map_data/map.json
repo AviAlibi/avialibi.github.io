@@ -99,7 +99,7 @@
             "Luminalia Gift": 50000,
             "Year of the Rooster Envelope": 50000,
             "Stims": 379,
-            "Janalite": 17676,
+            "Janalite": 17675991,
             "Iron": 347
         },
         "contributors": [
@@ -575,6 +575,60 @@
             "Stims": 379,
             "Hephaestanite": 2355,
             "Maze": 160000
+        },
+        "contributors": [
+            [
+                "SC:DimiStar",
+                "Discord:petrichor999",
+                "twitter:twitterName"
+            ]
+        ]
+    },
+    "Grim Hex": {
+        "location": "Crusader > Yela > Grim Hex",
+        "buy": {
+            "Scrap": 138,
+            "Waste": 2
+        },
+        "sell": {
+            "Astatine": 900,
+            "Chlorine": 170,
+            "Distilled Spirits": 555,
+            "Fluorine": 295,
+            "Hydrogen": 110,
+            "Iodine": 44,
+            "Processed Food": 150,
+            "Stims": 379,
+            "Neon": 8405,
+            "Agricultural Supplies": 120,
+            "Compboard": 2250,
+            "Year of the Rooster Envelope": 50000,
+            "Altruciatoxin": 5330,
+            "Widow": 12790,
+            "E'Tam": 10220,
+            "Dolivine": 130000,
+            "Aphorite": 152500,
+            "Luminalia Gift": 50000,
+            "Hadanite": 275000,
+            "Helium": 201,
+            "Sunset Berries": 1440,
+            "Quantainium": 21044,
+            "Borase": 3243,
+            "Construction Materials": 12437,
+            "Aluminum": 314,
+            "Gold": 6705,
+            "Hephaestanite": 2578,
+            "Party Favors": 1260,
+            "Maze": 86763,
+            "Recycled Material Composite": 6306,
+            "Copper": 338,
+            "Revenant Pod": 1338,
+            "Bexalite": 6987,
+            "Taranite": 7242,
+            "Iron": 379,
+            "Agricium": 2396,
+            "Tungsten": 404,
+            "Janalite": 14140793
         },
         "contributors": [
             [

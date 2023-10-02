@@ -1,9 +1,23 @@
 import json
+import tkinter as tk
+from tkinter import filedialog
 
-# Specify the filenames
-file1 = 'dev_items dimicargo\\test_map.json'
-file2 = 'dev_items dimicargo\data.json'
-output_file = 'merged.json'
+# Create a root window and hide it (we just want the file dialog)
+root = tk.Tk()
+root.withdraw()
+
+# Ask the user to specify the filenames
+file1 = filedialog.askopenfilename(title='Select the first JSON file')
+if not file1:
+    exit("No file selected. Exiting...")
+
+file2 = filedialog.askopenfilename(title='Select the second JSON file')
+if not file2:
+    exit("No file1 selected. Exiting...")
+
+output_file = filedialog.asksaveasfilename(defaultextension=".json", filetypes=[("JSON files", "*.json")], title='Save the merged JSON file')
+if not output_file:
+    exit("No file selected. Exiting...")
 
 # Read the first file
 with open(file1, 'r') as f:
