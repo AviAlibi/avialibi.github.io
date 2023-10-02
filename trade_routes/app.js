@@ -1,5 +1,4 @@
-// Assuming the JSON file is available at the same level as your HTML file
-fetch('map.json')
+fetch('../map_data/map.json')
     .then(response => response.json())
     .then(data => {
         let routes = findBestRoutes(data);
