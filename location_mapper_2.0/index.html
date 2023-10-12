@@ -11,13 +11,16 @@
     <div class="header_container">
         <div class="container_loc_name">
             <label for="location_name">Location Name:</label>
+            The location as shown in the Star Map
             <input id="location_name" placeholder="HDMS-Woodruff">
         </div>
         <div class="container_loc_planet">
             <label for="location_planet">Primary Location:</label>
+            Typically a planet, or Lagrange Point
             <input id="location_planet" placeholder="Hurston">
             <br>
             <label for="location_moon">Secondary Location:</label>
+            Only necessary if it is not directly on the Primary Location, usually a moon
             <input id="location_moon" placeholder="Ita">
         </div>
         <div class="save_buttons">
@@ -26,12 +29,18 @@
         </div>
     </div>
     <div class="buy_container" id="buy_container">
-        Buy
-        <button id="add_buy_item">+</button>
+        <div class="goods_header">
+            Buy
+            <button id="add_buy_item">+</button>
+        </div>
+        The goods under the BUY tab in the trade terminal
     </div>
     <div class="sell_container" id="sell_container">
-        Sell
-        <button id="add_sell_item">+</button>
+        <div class="goods_header">
+            Sell
+            <button id="add_sell_item">+</button>
+        </div>
+        The goods under the SELL tab in the trade terminal
     </div>
     <script src="script.js"></script>
 </body>

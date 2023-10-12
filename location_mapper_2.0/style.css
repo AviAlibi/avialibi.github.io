@@ -113,3 +113,8 @@ button:active {
     margin-left: auto; /* Pushing the button to the right */
     flex-shrink: 0; /* Prevents the button from shrinking */
 }
+
+.goods_header {
+    font-weight: bolder;
+    font-size: x-large;
+}
