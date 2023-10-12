@@ -8,23 +8,28 @@
 <body>
     <h1>Route Mapper</h1>
     <br>
-    <div class="container_loc_name">
-        <label for="location_name">Location Name:</label>
-        <input id="location_name" placeholder="HDMS-Woodruff">
+    <div class="header_container">
+        <div class="container_loc_name">
+            <label for="location_name">Location Name:</label>
+            <input id="location_name" placeholder="HDMS-Woodruff">
+        </div>
+        <div class="container_loc_planet">
+            <label for="location_planet">Primary Location:</label>
+            <input id="location_planet" placeholder="Hurston">
+            <br>
+            <label for="location_moon">Secondary Location:</label>
+            <input id="location_moon" placeholder="Ita">
+        </div>
+        <div class="save_buttons">
+            <button id="copy_to_clipboard">Copy to Clipboard</button>
+            <button id="save_as_file">Save as File</button>
+        </div>
     </div>
-    <div class="container_loc_planet">
-        <label for="location_planet">Planet:</label>
-        <input id="location_planet" placeholder="Hurston">
-        <label for="location_moon">Moon:</label>
-        <input id="location_moon" placeholder="Ita">
-    </div>
-    <hr>
-    <div class="buy_container">
+    <div class="buy_container" id="buy_container">
         Buy
         <button id="add_buy_item">+</button>
     </div>
-    <hr>
-    <div class="sell_container">
+    <div class="sell_container" id="sell_container">
         Sell
         <button id="add_sell_item">+</button>
     </div>
