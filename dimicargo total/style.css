@@ -1,0 +1,63 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: #131516;
+}
+
+.header {
+    background-image: url('argo_raft_unique_cargo_down_multi_colored.png');
+    /* Replace with the path to your background image */
+    background-size: cover;
+    background-position: center -500px;
+    color: #fff;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title-container {
+    position: relative;
+    display: inline-block;
+}
+
+.title {
+    position: relative;
+    display: inline-block;
+    padding: 20px 30px;
+    font-size: 8em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* Light Blue with a bit of transparency */
+    color: rgb(216,212,207);
+    text-shadow: 2px 2px 2px #000000;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #000000;
+    border-radius: 8px;
+}
+
+.navbar {
+    background-color: rgb(38, 42, 43);
+    overflow: hidden;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    /* Aligns items on the main axis – horizontally */
+    align-items: center;
+    /* Aligns items on the cross axis – vertically */
+}
+
+.navbar a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: #000;
+}
