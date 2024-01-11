@@ -1,23 +1,80 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
 #trivia {
-    width: 300px;
-    margin: auto;
-    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+}
+
+#question {
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 #answers li {
     list-style-type: none;
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
     border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-#answers li.selected {
-    background-color: #efefef;
+#answers li:hover {
+    background-color: #e2e2e2;
 }
 
 #result {
     margin-top: 20px;
     font-size: 20px;
-    color: green;
+    color: #4CAF50;
+}
+
+#streak {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #trivia {
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
+
+    #question {
+        font-size: 16px;
+    }
+
+    #answers li {
+        padding: 8px;
+    }
+
+    #result {
+        font-size: 18px;
+    }
+
+    #streak {
+        font-size: 20px;
+    }
 }
