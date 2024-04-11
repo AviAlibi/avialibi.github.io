@@ -1,84 +1,94 @@
+/* Overall Body and Layout */
 body {
+    background-color: #2C3E50; /* Dark background */
+    color: #ECF0F1; /* Light text */
     font-family: 'Arial', sans-serif;
-    background-color: #e8f5e9; /* Light greenish background */
-    color: #333;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
 }
 
+/* Trivia Container */
 #trivia {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #34495E; /* Slightly lighter dark shade for the container */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Typography */
+#trivia h1 {
+    color: #ECF0F1;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#trivia p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+/* Forms and Buttons */
+select, button {
     width: 100%;
-    max-width: 550px;
-}
-
-#question {
-    font-size: 20px;
-    margin-bottom: 25px;
-    color: #455a64; /* Darker shade for question */
-}
-
-#answers li {
-    list-style-type: none;
-    margin: 10px 0;
-    padding: 12px;
-    border-radius: 5px;
-    background-color: #c8e6c9; /* Light green for answers */
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #16A085;
+    color: #ECF0F1;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    border-left: 4px solid #388e3c; /* Green border */
+    font-size: 16px;
 }
 
-#answers li:hover {
-    background-color: #a5d6a7; /* Darker green on hover */
-    border-left-color: #2e7d32;
+button {
+    background-color: #E74C3C;
+    transition: background-color 0.3s;
 }
 
-#result {
-    margin-top: 30px;
-    font-size: 22px;
-    color: #4CAF50; /* Green color for result */
-    font-weight: bold;
+button:hover {
+    background-color: #C0392B;
 }
 
-#streak {
-    font-size: 26px;
-    margin-bottom: 25px;
-    color: #388e3c; /* Dark green for streak */
-    font-weight: bold;
+/* Answer Buttons */
+.answer-button {
+    background-color: #3498DB;
+    margin: 5px 0; /* Space between buttons */
+    transition: background-color 0.3s;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 600px) {
-    body {
-        padding: 15px;
-    }
+.answer-button:hover {
+    background-color: #2980B9;
+}
 
+/* Labels */
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+/* Adjusting Select Boxes */
+select {
+    background-color: #2980B9;
+    color: white;
+}
+
+/* Handling responsiveness */
+@media (max-width: 768px) {
     #trivia {
-        width: calc(100% - 30px);
-        margin: 15px;
-    }
-
-    #question {
-        font-size: 18px;
-    }
-
-    #answers li {
+        width: 95%;
         padding: 10px;
     }
 
-    #result {
-        font-size: 20px;
-    }
-
-    #streak {
-        font-size: 22px;
+    select, button {
+        font-size: 14px;
     }
 }

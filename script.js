@@ -1,55 +1,79 @@
-let currentStreak = 0;
-let correctAnswer = "";
-let isWaitingForNextQuestion = false;
+document.addEventListener('DOMContentLoaded', function () {
+    const startButton = document.querySelector('button');
+    const difficultySelect = document.getElementById('difficulty');
+    const categorySelect = document.getElementById('category');
+    const triviaContainer = document.getElementById('trivia'); // Ensure this is correctly pointing to your game container
+    let currentQuestionIndex = 0;
+    let correctStreak = 0;
+    let questions = [];
 
-fetchQuestion();
-
-function fetchQuestion() {
-    fetch("https://opentdb.com/api.php?amount=1&difficulty=medium&type=multiple")
-        .then(response => response.json())
-        .then(data => displayQuestion(data.results[0]));
-}
-
-function displayQuestion(questionData) {
-    document.getElementById("question").innerText = decodeHtml(questionData.question);
-    correctAnswer = decodeHtml(questionData.correct_answer);
-    let answers = [correctAnswer, ...questionData.incorrect_answers].map(decodeHtml).sort(() => Math.random() - 0.5);
-
-    let answersHtml = answers.map(answer => `<li onclick="selectAnswer(this)">${answer}</li>`).join("");
-    document.getElementById("answers").innerHTML = answersHtml;
-}
-
-function decodeHtml(html) {
-    var txt = document.createElement("textarea");
-    txt.innerHTML = html;
-    return txt.value;
-}
-
-function selectAnswer(li) {
-    // Prevent answering if we are waiting for the next question
-    if (isWaitingForNextQuestion) return;
-
-    let selectedAnswer = li.innerText;
-    let resultDisplay = document.getElementById("result");
-    let triviaContent = document.getElementById("triviaContent");
-
-    if (selectedAnswer === correctAnswer) {
-        currentStreak++;
-        resultDisplay.innerText = "Correct!";
-    } else {
-        currentStreak = 0;
-        resultDisplay.innerText = "Incorrect!";
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
     }
 
-    document.getElementById("streak").innerText = "Streak: " + currentStreak;
-    triviaContent.style.display = "none"; // Hide the question and answers
-    isWaitingForNextQuestion = true;
+    function fetchQuestions() {
+        const difficulty = difficultySelect.value;
+        const category = categorySelect.value;
+        const apiUrl = `https://opentdb.com/api.php?amount=5&type=multiple${category}${difficulty}`;
 
-    // Wait for a short period before fetching the next question
-    setTimeout(() => {
-        fetchQuestion();
-        resultDisplay.innerText = "";
-        triviaContent.style.display = "block"; // Show them again for the next question
-        isWaitingForNextQuestion = false;
-    }, 2000); // Adjust the delay as needed
-}
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                if (data.results.length > 0) {
+                    questions = questions.concat(data.results); // Append new questions
+                    if (currentQuestionIndex === 0) {
+                        showQuestion(); // Start showing questions only if it's the initial fetch
+                    }
+                } else {
+                    alert('No questions found. Please try different settings.');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching questions:', error);
+                alert('Failed to fetch questions. Please check your internet connection.');
+            });
+    }
+
+    function showQuestion() {
+        if (currentQuestionIndex < questions.length) {
+            const question = questions[currentQuestionIndex];
+            const answers = [...question.incorrect_answers, question.correct_answer];
+            shuffleArray(answers);
+
+            const questionHtml = `
+                <div>
+                    <p>${question.question}</p>
+                    ${answers.map(answer => `<button class="answer-button">${answer}</button>`).join('')}
+                </div>
+            `;
+
+            document.getElementById('trivia').innerHTML = questionHtml;
+
+            document.querySelectorAll('.answer-button').forEach(button => {
+                button.addEventListener('click', function () {
+                    if (this.textContent === question.correct_answer) {
+                        correctStreak++;
+                        alert('Correct! Your streak is now: ' + correctStreak);
+                        currentQuestionIndex++;
+                        if (currentQuestionIndex >= questions.length) {
+                            fetchQuestions(); // Fetch more questions if we've gone through all available
+                        } else {
+                            showQuestion();
+                        }
+                    } else {
+                        alert('Wrong! Your final streak was: ' + correctStreak + '. Starting a new game.');
+                        // Refresh the page to restart the game
+                        window.location.reload();
+                    }
+                });
+            });
+        }
+    }
+
+    startButton.addEventListener('click', function () {
+        fetchQuestions(); // Initial fetch of questions
+    });
+});
