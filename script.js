@@ -15,27 +15,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function fetchQuestions() {
-        const difficulty = difficultySelect.value;
-        const category = categorySelect.value;
-        const apiUrl = `https://opentdb.com/api.php?amount=5&type=multiple${category}${difficulty}`;
+    const difficulty = difficultySelect.value;
+    const category = categorySelect.value;
+    const apiUrl = `https://opentdb.com/api.php?amount=5&type=multiple${category}${difficulty}`;
 
-        fetch(apiUrl)
-            .then(response => response.json())
-            .then(data => {
-                if (data.results.length > 0) {
-                    questions = questions.concat(data.results); // Append new questions
-                    if (currentQuestionIndex === 0) {
-                        showQuestion(); // Start showing questions only if it's the initial fetch
-                    }
-                } else {
-                    alert('No questions found. Please try different settings.');
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            if (data.results.length > 0) {
+                questions = questions.concat(data.results);
+                console.log('Questions fetched and added:', questions.length);
+                if (currentQuestionIndex >= questions.length) {
+                    showQuestion(); // Start showing questions only if needed
                 }
-            })
-            .catch(error => {
-                console.error('Error fetching questions:', error);
-                alert('Failed to fetch questions. Please check your internet connection.');
-            });
-    }
+            } else {
+                alert('No questions found. Please try different settings.');
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching questions:', error);
+            alert('Failed to fetch questions. Please check your internet connection.');
+        });
+}
 
     function showQuestion() {
         if (currentQuestionIndex < questions.length) {
