@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         correctStreak++;
                         alert('Correct! Your streak is now: ' + correctStreak);
                         currentQuestionIndex++;
-                        if (currentQuestionIndex >= questions.length - 1) {
+                        if (currentQuestionIndex >= questions.length) {
                             fetchQuestions(); // Fetch more questions if we've gone through all available
                         } else {
                             showQuestion();
