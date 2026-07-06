@@ -365,14 +365,15 @@ def main() -> None:
 
     if crossings_df.empty:
         print()
-        print("No gate crossings detected.")
-    else:
-        print()
-        print(f"Detected {len(crossings_df)} gate crossing(s).")
-        race_start_time = crossings_df.iloc[0]["cross_time"]
-        race_finish_time = crossings_df.iloc[-1]["cross_time"]
-        print(f"First crossing: {race_start_time}")
-        print(f"Last crossing: {race_finish_time}")
+        print("No gate crossings detected — nothing to show. Check that the run overlaps the track gates.")
+        return
+
+    print()
+    print(f"Detected {len(crossings_df)} gate crossing(s).")
+    race_start_time = crossings_df.iloc[0]["cross_time"]
+    race_finish_time = crossings_df.iloc[-1]["cross_time"]
+    print(f"First crossing: {race_start_time}")
+    print(f"Last crossing: {race_finish_time}")
 
     render_map(route_df, gates, track_payload)
     print_run_summary(data_file, track_file, route_df, crossings_df, track_payload)
