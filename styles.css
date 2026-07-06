@@ -1,0 +1,125 @@
+:root {
+  --bg: #f4f8fb;
+  --card: #ffffff;
+  --text: #102128;
+  --muted: #536a75;
+  --accent: #0f9d8c;
+  --accent-strong: #0c7f72;
+  --danger: #b83232;
+  --border: #d6e0e5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 10% 0%, #e3f4ff 0%, var(--bg) 40%);
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+}
+
+.subtitle {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+}
+
+.controls,
+.status,
+.table-wrap,
+.notes {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0.85rem;
+  margin-top: 0.9rem;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 0.65rem;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 0.8rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--accent);
+  color: #fff;
+}
+
+button:hover:enabled {
+  background: var(--accent-strong);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+#stopBtn {
+  background: var(--danger);
+}
+
+.status p {
+  margin: 0.35rem 0;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  padding: 0.55rem;
+  font-size: 0.9rem;
+}
+
+th {
+  background: #f7fbfe;
+}
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+}
+
+.notes ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+@media (max-width: 640px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  th,
+  td {
+    font-size: 0.84rem;
+  }
+}

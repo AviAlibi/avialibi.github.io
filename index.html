@@ -1,48 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Trivia Game</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GPS Ping Recorder</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div id="trivia">
-        <label for="difficulty">Difficulty: </label>
-            <select name="difficulty" id="difficulty">
-                <option value="&difficulty=easy">easy</option>
-                <option value="&difficulty=medium">medium</option>
-                <option value="&difficulty=hard">hard</option>
-            </select>
-        <label for="category">Category: </label>
-            <select name="category" id="category">
-                <option value="">random</option>
-                <option value="&category=9">General Knowledge</option>
-                <option value="&category=10">Books</option>
-                <option value="&category=11">Film</option>
-                <option value="&category=12">Music</option>
-                <option value="&category=13">Musicals & Theatre</option>
-                <option value="&category=14">Television</option>
-                <option value="&category=15">Video Games</option>
-                <option value="&category=16">Board Games</option>
-                <option value="&category=17">Science & Nature</option>
-                <option value="&category=18">Computers</option>
-                <option value="&category=19">Math</option>
-                <option value="&category=20">Mythology</option>
-                <option value="&category=21">Sports</option>
-                <option value="&category=22">Geography</option>
-                <option value="&category=23">History</option>
-                <option value="&category=24">Politics</option>
-                <option value="&category=25">Art</option>
-                <option value="&category=26">Celebrities</option>
-                <option value="&category=27">Animals</option>
-                <option value="&category=28">Vehicles</option>
-                <option value="&category=29">Comics</option>
-                <option value="&category=30">Gadgets</option>
-                <option value="&category=31">Anime & Manga</option>
-                <option value="&category=32">Cartoons & Animations</option>
-            </select>
-        <button>start</button>
-    </div>
-    <script src="script.js"></script>
+  <main class="app">
+    <header class="app-header">
+      <h1>GPS Ping Recorder</h1>
+      <p class="subtitle">Capture location pings and export as JSON.</p>
+    </header>
+
+    <section class="controls" aria-label="Recorder controls">
+      <button id="startBtn" type="button">Start Recording</button>
+      <button id="stopBtn" type="button" disabled>Stop Recording</button>
+      <button id="saveBtn" type="button" disabled>Download JSON</button>
+      <button id="clearBtn" type="button" disabled>Clear</button>
+    </section>
+
+    <section class="status" aria-live="polite">
+      <p><strong>Status:</strong> <span id="statusText">Idle</span></p>
+      <p><strong>Pings:</strong> <span id="pingCount">0</span></p>
+      <p><strong>Last Ping:</strong> <span id="lastPing">None</span></p>
+    </section>
+
+    <section class="table-wrap" aria-label="Ping list">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Time (ISO)</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Accuracy (m)</th>
+            <th>Speed (m/s)</th>
+          </tr>
+        </thead>
+        <tbody id="pingTableBody">
+          <tr>
+            <td colspan="6" class="empty">No pings yet.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes">
+      <h2>Notes</h2>
+      <ul>
+        <li>Geolocation usually requires HTTPS (or localhost).</li>
+        <li>Keep the browser tab open while recording.</li>
+        <li>Use the downloaded JSON file in your scripting tool.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>
