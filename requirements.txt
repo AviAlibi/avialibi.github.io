@@ -2,3 +2,5 @@ pandas
 folium
 matplotlib
 ipython
+contextily
+pyproj
