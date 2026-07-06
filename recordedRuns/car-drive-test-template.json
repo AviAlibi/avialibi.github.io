@@ -1,0 +1,94 @@
+{
+  "exportedAtIso": "2026-07-06T14:04:00.000Z",
+  "totalPings": 25,
+  "pings": [
+    {
+      "timestampMs": 1783346400000,
+      "timestampIso": "2026-07-06T14:00:00.000Z",
+      "latitude": 35.14969077046915,
+      "longitude": -78.98882326612343,
+      "accuracy": 6.3,
+      "altitude": 112.4,
+      "altitudeAccuracy": 10.5,
+      "heading": 92,
+      "speed": 0.0
+    },
+    {
+      "timestampMs": 1783346410000,
+      "timestampIso": "2026-07-06T14:00:10.000Z",
+      "latitude": 35.148868601641766,
+      "longitude": -78.98855004565185,
+      "accuracy": 5.8,
+      "altitude": 112.3,
+      "altitudeAccuracy": 10.2,
+      "heading": 94,
+      "speed": 3.1
+    },
+    {
+      "timestampMs": 1783346420000,
+      "timestampIso": "2026-07-06T14:00:20.000Z",
+      "latitude": 35.14877167299488,
+      "longitude": -78.98827682518026,
+      "accuracy": 5.2,
+      "altitude": 112.1,
+      "altitudeAccuracy": 9.9,
+      "heading": 96,
+      "speed": 6.5
+    },
+    {
+      "timestampMs": 1783346430000,
+      "timestampIso": "2026-07-06T14:00:30.000Z",
+      "latitude": 35.149588379234714,
+      "longitude": -78.98441214140763,
+      "accuracy": 5.0,
+      "altitude": 111.9,
+      "altitudeAccuracy": 9.7,
+      "heading": 97,
+      "speed": 9.2
+    },
+    {
+      "timestampMs": 1783346440000,
+      "timestampIso": "2026-07-06T14:00:40.000Z",
+      "latitude": 35.14986054537515,
+      "longitude": -78.98437650395482,
+      "accuracy": 4.9,
+      "altitude": 111.8,
+      "altitudeAccuracy": 9.4,
+      "heading": 99,
+      "speed": 12.8
+    },
+    {
+      "timestampMs": 1783346450000,
+      "timestampIso": "2026-07-06T14:00:50.000Z",
+      "latitude": 35.15153783765359,
+      "longitude": -78.98491898518111,
+      "accuracy": 4.7,
+      "altitude": 111.7,
+      "altitudeAccuracy": 9.1,
+      "heading": 101,
+      "speed": 14.9
+    },
+    {
+      "timestampMs": 1783346460000,
+      "timestampIso": "2026-07-06T14:01:00.000Z",
+      "latitude": 35.15165459323032,
+      "longitude": -78.98527931942627,
+      "accuracy": 4.6,
+      "altitude": 111.5,
+      "altitudeAccuracy": 8.9,
+      "heading": 103,
+      "speed": 16.1
+    },
+    {
+      "timestampMs": 1783346470000,
+      "timestampIso": "2026-07-06T14:01:10.000Z",
+      "latitude": 35.15088424614907,
+      "longitude": -78.98891829933063,
+      "accuracy": 4.5,
+      "altitude": 111.3,
+      "altitudeAccuracy": 8.8,
+      "heading": 104,
+      "speed": 17.0
+    }
+  ]
+}
