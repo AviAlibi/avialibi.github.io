@@ -1,12 +1,12 @@
 :root {
-  --bg: #f4f8fb;
-  --card: #ffffff;
-  --text: #102128;
-  --muted: #536a75;
-  --accent: #0f9d8c;
-  --accent-strong: #0c7f72;
-  --danger: #b83232;
-  --border: #d6e0e5;
+  --bg: #0b1117;
+  --card: #121c25;
+  --text: #e7f0f5;
+  --muted: #9eb2be;
+  --accent: #1db6a3;
+  --accent-strong: #179787;
+  --danger: #d24b4b;
+  --border: #2a3b47;
 }
 
 * {
@@ -17,7 +17,7 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text);
-  background: radial-gradient(circle at 10% 0%, #e3f4ff 0%, var(--bg) 40%);
+  background: radial-gradient(circle at 10% 0%, #132431 0%, var(--bg) 42%);
 }
 
 .app {
@@ -61,7 +61,7 @@ button {
   font-weight: 600;
   cursor: pointer;
   background: var(--accent);
-  color: #fff;
+  color: #041312;
 }
 
 button:hover:enabled {
@@ -100,7 +100,7 @@ td {
 }
 
 th {
-  background: #f7fbfe;
+  background: #1a2833;
 }
 
 .empty {
