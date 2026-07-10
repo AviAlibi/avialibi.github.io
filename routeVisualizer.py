@@ -66,6 +66,20 @@ def get_track_file() -> Path:
     return prompt_choice("Available track files:", track_files)
 
 
+def prompt_visualization_mode() -> str:
+    print("Visualization mode")
+    print("1. Run + track (route, gate crossings, summary)")
+    print("2. Track only (gates only, no run required)")
+
+    while True:
+        raw_value = input("Choose a number (press Enter for 1): ").strip()
+        if raw_value == "" or raw_value == "1":
+            return "run-and-track"
+        if raw_value == "2":
+            return "track-only"
+        print("Pick 1 or 2.")
+
+
 def parse_route_payload(payload: dict) -> pd.DataFrame:
     pings = payload.get("pings", [])
     if not pings:
@@ -252,11 +266,19 @@ def print_run_summary(data_file: Path, track_file: Path, route_df: pd.DataFrame,
         )
 
 
-def render_map(route_df: pd.DataFrame, gates: list[dict], track_payload: dict) -> None:
-    route_lons = route_df["longitude"].to_numpy()
-    route_lats = route_df["latitude"].to_numpy()
-    all_lons = [*route_lons.tolist()]
-    all_lats = [*route_lats.tolist()]
+def render_map(route_df: pd.DataFrame | None, gates: list[dict], track_payload: dict, show_route: bool = True) -> None:
+    route_lons = None
+    route_lats = None
+    all_lons = []
+    all_lats = []
+    if show_route:
+        if route_df is None or route_df.empty:
+            raise ValueError("A non-empty route is required when show_route=True.")
+        route_lons = route_df["longitude"].to_numpy()
+        route_lats = route_df["latitude"].to_numpy()
+        all_lons.extend(route_lons.tolist())
+        all_lats.extend(route_lats.tolist())
+
     for gate in gates:
         all_lats.extend([gate["alpha"][0], gate["beta"][0]])
         all_lons.extend([gate["alpha"][1], gate["beta"][1]])
@@ -285,7 +307,8 @@ def render_map(route_df: pd.DataFrame, gates: list[dict], track_payload: dict) -
             x_max, y_max = transformer.transform(max_lon + lon_pad, max_lat + lat_pad)
             ax.set_xlim(x_min, x_max)
             ax.set_ylim(y_min, y_max)
-            route_x, route_y = transformer.transform(route_lons, route_lats)
+            if show_route and route_lons is not None and route_lats is not None:
+                route_x, route_y = transformer.transform(route_lons, route_lats)
 
             gate_coords = []
             for gate in gates:
@@ -315,8 +338,9 @@ def render_map(route_df: pd.DataFrame, gates: list[dict], track_payload: dict) -
         )
         ax.grid(True, color="#1a2833", linewidth=0.8, alpha=0.8)
 
-    ax.plot(route_x, route_y, color="#2f7bff", linewidth=2.5, zorder=3)
-    ax.scatter(route_x, route_y, s=28, color="#2f7bff", edgecolors="#dbe8ff", linewidths=0.4, zorder=4)
+    if show_route and route_x is not None and route_y is not None:
+        ax.plot(route_x, route_y, color="#2f7bff", linewidth=2.5, zorder=3)
+        ax.scatter(route_x, route_y, s=28, color="#2f7bff", edgecolors="#dbe8ff", linewidths=0.4, zorder=4)
 
     for index, (alpha_point, beta_point) in enumerate(gate_coords, start=1):
         if index == 1:
@@ -331,7 +355,8 @@ def render_map(route_df: pd.DataFrame, gates: list[dict], track_payload: dict) -
     ax.set_axis_off()
     ax.set_title("")
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    output_name = f"route-map-{slugify(track_payload.get('name', 'track'))}.png"
+    output_prefix = "route-map" if show_route else "track-map"
+    output_name = f"{output_prefix}-{slugify(track_payload.get('name', 'track'))}.png"
     output_path = OUTPUT_DIR / output_name
     fig.savefig(output_path, dpi=200, bbox_inches="tight", pad_inches=0.02, facecolor=fig.get_facecolor())
     print(f"Saved map image to {output_path}")
@@ -346,21 +371,33 @@ def slugify(value: str) -> str:
 def main() -> None:
     print("Route visualizer")
     print("----------------")
-    print("This script will ask you for a run file and a track file, then show a map and summary.")
+    print("This script can show either run + track details or a track-only map.")
     print()
 
-    data_file = get_run_file()
+    visualization_mode = prompt_visualization_mode()
+
+    print()
     track_file = get_track_file()
+    track_payload = load_json_file(track_file)
+    gates = build_gates(track_payload)
+
+    if visualization_mode == "track-only":
+        print()
+        print(f"Using track: {track_file.name}")
+        print(f"Track name: {track_payload.get('name', track_file.stem)}")
+        print(f"Gate count: {len(gates)}")
+        render_map(None, gates, track_payload, show_route=False)
+        return
+
+    data_file = get_run_file()
 
     print()
     print(f"Using run: {data_file.name}")
     print(f"Using track: {track_file.name}")
 
     route_payload = load_json_file(data_file)
-    track_payload = load_json_file(track_file)
 
     route_df = enrich_route(parse_route_payload(route_payload))
-    gates = build_gates(track_payload)
     crossings_df = detect_gate_crossings(route_df, gates)
 
     if crossings_df.empty:
@@ -375,7 +412,7 @@ def main() -> None:
     print(f"First crossing: {race_start_time}")
     print(f"Last crossing: {race_finish_time}")
 
-    render_map(route_df, gates, track_payload)
+    render_map(route_df, gates, track_payload, show_route=True)
     print_run_summary(data_file, track_file, route_df, crossings_df, track_payload)
 
 
